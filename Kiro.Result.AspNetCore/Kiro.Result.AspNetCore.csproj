@@ -11,6 +11,8 @@
         <RepositoryUrl>https://github.com/kirollos-hany/Result.git</RepositoryUrl>
         <RepositoryType>public</RepositoryType>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseFile>D:\kirollos\Personal\Dotnet-Projects\Result\Kiro.Result\Kiro.Result.AspNetCore\license.txt</PackageLicenseFile>
+        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
     <ItemGroup>
@@ -22,10 +24,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="icon.png">
+      <None Include="icon.png">
         <Pack>True</Pack>
-        <PackagePath></PackagePath>
+        <PackagePath>./</PackagePath>
       </None>
+		<None Include="license.txt">
+			<Pack>True</Pack>
+			<PackagePath>./</PackagePath>
+		</None>
     </ItemGroup>
 
 </Project>
