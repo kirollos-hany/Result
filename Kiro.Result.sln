@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kiro.Result", "Kiro.Result", "{80EF5408-276D-41CE-BE17-B5678BE12620}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9513051A-11C6-4251-B9B1-E5F45B587723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kiro.Result", "Kiro.Result\Kiro.Result.csproj", "{720CE7FD-49CF-4795-929D-139481688DEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kiro.Result.AspNetCore", "Kiro.Result.AspNetCore", "{CA6B2A28-39DD-4171-9FAE-BF2E275630C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3FA7B79C-D399-424C-8E9B-50C0230ECB66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kiro.Result.AspNetCore", "Kiro.Result.AspNetCore\Kiro.Result.AspNetCore.csproj", "{B7E83CD8-64C7-4298-B9AF-9C038D4B8412}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{720CE7FD-49CF-4795-929D-139481688DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{720CE7FD-49CF-4795-929D-139481688DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{720CE7FD-49CF-4795-929D-139481688DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{720CE7FD-49CF-4795-929D-139481688DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7E83CD8-64C7-4298-B9AF-9C038D4B8412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7E83CD8-64C7-4298-B9AF-9C038D4B8412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7E83CD8-64C7-4298-B9AF-9C038D4B8412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7E83CD8-64C7-4298-B9AF-9C038D4B8412}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9513051A-11C6-4251-B9B1-E5F45B587723} = {80EF5408-276D-41CE-BE17-B5678BE12620}
+		{720CE7FD-49CF-4795-929D-139481688DEE} = {9513051A-11C6-4251-B9B1-E5F45B587723}
+		{3FA7B79C-D399-424C-8E9B-50C0230ECB66} = {CA6B2A28-39DD-4171-9FAE-BF2E275630C7}
+		{B7E83CD8-64C7-4298-B9AF-9C038D4B8412} = {3FA7B79C-D399-424C-8E9B-50C0230ECB66}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF973886-5043-4B9B-8D76-CCCFF908D92D}
+	EndGlobalSection
+EndGlobal

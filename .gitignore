@@ -1,0 +1,6 @@
+/.vs/
+/.idea/
+Kiro.Result/bin
+Kiro.Result/obj
+Kiro.Result.AspNetCore/bin
+Kiro.Result.AspNetCore/obj
