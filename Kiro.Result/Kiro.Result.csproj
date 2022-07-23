@@ -5,6 +5,20 @@
     <Nullable>enable</Nullable>
     <TargetFrameworks>net6.0;netstandard2.1</TargetFrameworks>
     <ImplicitUsings>disable</ImplicitUsings>
+    <Title>Result</Title>
+    <Authors>Kirollos Hany</Authors>
+    <Description>A custom result type inspired by Ardalis result type </Description>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/kirollos-hany/Result.git</RepositoryUrl>
+    <RepositoryType>public</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

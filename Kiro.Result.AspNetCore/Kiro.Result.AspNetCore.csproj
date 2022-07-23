@@ -4,6 +4,13 @@
         <ImplicitUsings>disable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <TargetFrameworks>net6.0;netstandard2.1</TargetFrameworks>
+        <Title>ResultExtensions</Title>
+        <Authors>Kirollos Hany</Authors>
+        <Description>Result type extensions to map to asp net core action result</Description>
+        <PackageIcon>icon.png</PackageIcon>
+        <RepositoryUrl>https://github.com/kirollos-hany/Result.git</RepositoryUrl>
+        <RepositoryType>public</RepositoryType>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,6 +19,13 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Kiro.Result\Kiro.Result.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="icon.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>
