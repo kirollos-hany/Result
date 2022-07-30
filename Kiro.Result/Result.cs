@@ -10,6 +10,11 @@ namespace Kiro.Result
             SuccessValue = value;
         }
 
+        public Result()
+        {
+            
+        }
+
         protected Result(ResultStatus status, TFail value) : this(status)
         {
             FailValue = value;
@@ -30,9 +35,6 @@ namespace Kiro.Result
         {
             return IsSuccessful ? (object?) SuccessValue : FailValue;
         }
-
-        public static Result<TFail, TSuccess> Success(TSuccess value) => new Result<TFail, TSuccess>(value);
-
 
         public static Result<TFail, TSuccess> BadRequest(TFail value) =>
             new Result<TFail, TSuccess>(ResultStatus.BadRequest, value);

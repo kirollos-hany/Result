@@ -13,18 +13,23 @@ namespace Kiro.Result.AspNetCore
         {
             return controller.ToActionResult((IResult)result);
         }
-    
+
         public static ActionResult ToActionResult<TFail, TSuccess>(this ControllerBase controller,
             Result<TFail, TSuccess> result)
         {
             return controller.ToActionResult((IResult)result);
         }
-    
+
         private static ActionResult ToActionResult(this ControllerBase controller, IResult result)
         {
-            return _dictionary[result.Status](result, controller);
+            if (_dictionary.TryGetValue(result.Status, out var mapFunction))
+            {
+                return mapFunction(result, controller);
+            }
+
+            throw new NotSupportedException($"Result status {result.Status} not supported.");
         }
-    
+
         private static readonly IDictionary<ResultStatus, Func<IResult, ControllerBase, ActionResult>> _dictionary =
             new Dictionary<ResultStatus, Func<IResult, ControllerBase, ActionResult>>
             {
@@ -59,4 +64,3 @@ namespace Kiro.Result.AspNetCore
             };
     }
 }
-
