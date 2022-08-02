@@ -48,56 +48,56 @@ namespace Kiro.Result
         /// Represents a successful operation and accepts a value as the result of the operation
         /// </summary>
         /// <param name="value">Sets the SuccessValue property</param>
-        /// <returns>A successful result instance with a success value</returns>
+        /// <returns><see cref="Result{TFail, TSuccess}"/> A successful result instance with a success value</returns>
         public static Result<TFail, TSuccess> Success(TSuccess value) =>
             new Result<TFail, TSuccess>(ResultStatus.Ok, value);
 
         /// <summary>
         /// Represents a successful operation with no value
         /// </summary>
-        /// <returns>A successful result instance without a success value</returns>
+        /// <returns><see cref="Result{TFail, TSuccess}"/> A successful result instance without a success value</returns>
         public static Result<TFail, TSuccess> Success() => new Result<TFail, TSuccess>(ResultStatus.Ok);
 
         /// <summary>
         /// Represents a bad request operation and accepts a value as the result of the operation
         /// </summary>
         /// <param name="value">Sets the FailValue property</param>
-        /// <returns>A failed result instance with a fail value</returns>
+        /// <returns><see cref="Result{TFail, TSuccess}"/> A failed result instance with a fail value</returns>
         public static Result<TFail, TSuccess> BadRequest(TFail value) =>
             new Result<TFail, TSuccess>(ResultStatus.BadRequest, value);
 
         /// <summary>
         /// Represents a bad request operation without value
         /// </summary>
-        /// <returns>A failed result instance without a fail value</returns>
+        /// <returns><see cref="Result{TFail, TSuccess}"/> A failed result instance without a fail value</returns>
         public static Result<TFail, TSuccess> BadRequest() => new Result<TFail, TSuccess>(ResultStatus.BadRequest);
 
         /// <summary>
         /// Represents a not found operation and accepts a value as the result of the operation
         /// </summary>
         /// <param name="value">Sets the FailValue property</param>
-        /// <returns>A failed result instance with a fail value</returns>
+        /// <returns><see cref="Result{TFail, TSuccess}"/> A failed result instance with a fail value</returns>
         public static Result<TFail, TSuccess> NotFound(TFail value) =>
             new Result<TFail, TSuccess>(ResultStatus.NotFound, value);
 
         /// <summary>
         /// Represents a not found operation without value
         /// </summary>
-        /// <returns>A failed result instance without a fail value</returns>
+        /// <returns><see cref="Result{TFail, TSuccess}"/> A failed result instance without a fail value</returns>
         public static Result<TFail, TSuccess> NotFound() => new Result<TFail, TSuccess>(ResultStatus.NotFound);
 
         /// <summary>
         /// Represents an unauthorized operation and accepts a value as the result of the operation
         /// </summary>
         /// <param name="value">Sets the FailValue property</param>
-        /// <returns>A failed result instance with a fail value</returns>
+        /// <returns><see cref="Result{TFail, TSuccess}"/> A failed result instance with a fail value</returns>
         public static Result<TFail, TSuccess> Unauthorized(TFail value) =>
             new Result<TFail, TSuccess>(ResultStatus.Unauthorized, value);
 
         /// <summary>
         /// Represents an unauthorized operation without value
         /// </summary>
-        /// <returns>A failed result instance without a fail value</returns>
+        /// <returns><see cref="Result{TFail, TSuccess}"/> A failed result instance without a fail value</returns>
         public static Result<TFail, TSuccess> Unauthorized() => new Result<TFail, TSuccess>(ResultStatus.NotFound);
 
         public static implicit operator TSuccess(Result<TFail, TSuccess> result) => result.SuccessValue;

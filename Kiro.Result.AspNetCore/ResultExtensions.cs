@@ -8,12 +8,24 @@ namespace Kiro.Result.AspNetCore
 {
     public static class ResultExtensions
     {
+        /// <summary>
+        /// Convert a <see cref="Result{TFail, TSuccess}"/> to a <see cref="ActionResult"/>
+        /// </summary>
+        /// <param name="controller">The controller this is called from</param>
+        /// <param name="result">The Result to convert to an ActionResult</param>
+        /// <returns><see cref="ActionResult"/> mapped from the result object</returns>
         public static ActionResult ToActionResult<TFail, TSuccess>(this Result<TFail, TSuccess> result,
             ControllerBase controller)
         {
             return controller.ToActionResult((IResult)result);
         }
 
+        /// <summary>
+        /// Convert a <see cref="Result{TFail, TSuccess}"/> to a <see cref="ActionResult"/>
+        /// </summary>
+        /// <param name="controller">The controller this is called from</param>
+        /// <param name="result">The Result to convert to an ActionResult</param>
+        /// <returns><see cref="ActionResult"/> mapped from the result object</returns>
         public static ActionResult ToActionResult<TFail, TSuccess>(this ControllerBase controller,
             Result<TFail, TSuccess> result)
         {
